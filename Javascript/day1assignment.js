@@ -63,7 +63,7 @@ class BankAccount {
         }
     }
     
-    // User should be able to transfer money from one bank account to another
+    // User should be able to transfer money from one bank account to another.
     transfer(amount, destination) {
         this.withdraw(amount);
         destination.deposit(amount);
