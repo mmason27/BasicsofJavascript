@@ -4,29 +4,24 @@ let pendingTaskList = document.getElementById("pendingTaskList");
 let completedTaskList = document.getElementById("completedTaskList");
 let buttonSubmit = document.getElementById("buttonSubmit");
 
-
-// everything needs to be in this one function
-
 buttonSubmit.addEventListener("click", function() {
     let taskName = addTaskBox.value;
 
     let listItem = document.createElement("li");
     listItem.innerHTML = taskName;
 
-    //to append task to pending task list -- is it okay here? Azam has it at the bottom, close to the end of the function
-    // pendingTaskList.appendChild(listItem);
-
     //creating the remove button
     let removeButton = document.createElement("button");
     removeButton.innerHTML = "Remove";
     removeButton.addEventListener("click", function(list) {
-        if (list == pendingTaskList) {
+        if (list == pendingTaskList) { //if item is in pending task list, delete it from there
             pendingTaskList.removeChild(this.parentElement);
         }
         else {
             completedTaskList.removeChild(this.parentElement);
         }
     })
+    
     //creating the checkbox to move task from pending task list to completed task list
     let checkbox = document.createElement("input");
     checkbox.setAttribute("type", "checkbox");
