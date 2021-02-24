@@ -1,4 +1,4 @@
-// create an app that determines if a word is a palindrome app
+// 1. create an app that determines if a word is a palindrome app
 
 function isPalindrome(word) {
     let reverseString = "";
@@ -13,7 +13,7 @@ function isPalindrome(word) {
     }
 }
 
-// create an app that removes duplicates from an array
+// 2. create an app that removes duplicates from an array
 
 function removeDuplicates(list) {
     let mySet = new Set(list);
@@ -21,9 +21,82 @@ function removeDuplicates(list) {
     return newArray;
 } 
 
-//to test
+// to test
+
 let exampleArray = ["John","Mary", "Alex", "Steve", "Mary", "John"];
 console.log(removeDuplicates(exampleArray));
+
+// 3. create an app which returns true/false depending on if the item is in the array
+
+function inArray(list, item) {
+    let testArray = list.includes(item);
+    return testArray;
+} 
+
+console.log(inArray(exampleArray, "Alex"));
+
+// 4. create an app which finds the largest number in an array
+
+numbersArray = [1, 5, 18, 2, 7, 98, 32];
+
+function largestNumber(list) {
+    list.sort(function(a, b){return b-a});
+    return list[0]
+}
+
+console.log(largestNumber(numbersArray));
+
+// 5. create an app which finds the smallest number in an array
+
+function smallestNumber(list) {
+    list.sort(function(a,b){return a-b})
+    return list[0]
+}
+
+console.log(smallestNumber(numbersArray));
+
+// 6. create a fizzbuzz app.  If the number is divisible by 3 then print "Fizz", if the input it divisible by 5 then print "Buzz". If the input is divisible by 3 and 5 then print "Fizz Buzz".
+
+function fizzBuzz(number) {
+    if (number % 3 == 0 && number % 5 == 0) {
+        console.log("FizzBuzz");    
+    }
+    else if (number % 5 == 0) {
+        console.log("Buzz");
+    }
+    else if (number % 3 == 0) {
+        console.log("Fizz");
+    }
+    else {
+        console.log("Sorry, that number is neither divisible by 3 nor 5. It's a fizzbust!");
+    }
+
+}
+
+fizzBuzz(15);
+
+// 7. create an app which determines if the number is even or odd
+
+function isEven(number) {
+    if (number % 2 == 0) {
+        console.log("EVEN")
+    }
+    else {
+        console.log("ODD")
+    }
+}
+
+// 8. take the array [3,4,56,7,8,1] and sort it in ascending and descending order.
+
+numbers = [3,4,56,7,8,1];
+numbers.sort(function(a-b){a-b});
+console.log(numbers[0])
+
+function ascendingOrder(list) {
+    
+}
+
+isEven(16);
 
 // create a class which represent a "Bank Account". The Bank Account will have the following properties: first name, last name, middle name, account type, balance, status(open/closed/freezed)
 
