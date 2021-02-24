@@ -1,3 +1,7 @@
+html {
+    display: flex;
+}
+
 body {
     background-color: honeydew;
 }
@@ -16,6 +20,11 @@ label {
     font-size: 1.5rem;
 }
 
+ul {
+    background-color: rgb(209, 204, 204);
+    font-size: 1.2rem;
+}
+
 .textBox {
     font-size: 1.1rem;
     width: 45%;
@@ -24,6 +33,20 @@ label {
 @media (max-width: 480px) {
     body {
         display: flex;
-        font-size: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .button {
+        padding: 10px;
+        margin: 10px;
+        width: 50%;
+    }
+
+    .textBox {
+        width: 85%;
     }
 }
