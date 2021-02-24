@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Day 2 Teplate Literal Activity Iterating Through an Array</title>
+</head>
+<body>
+    <h1>Speakers</h1>
+    <ul id="speakersUL"></ul>
+
+    <script>
+    const speakers = [
+        { name: 'John Doe', category: 'JavaScript' },
+        { name: 'Mary Doe', category: 'Python' },
+        { name: 'Alex Doe', category: 'iOS' },
+        { name: 'Steve Doe', category: 'Kotlin' },
+        { name: 'Jerry Doe', category: 'Java' },
+]
+
+    //first need to iterate through the array
+    for(let index=0; index < speakers.length; index++) {
+        let speaker = speakers[index] //assign it to a variable for clarity instead of having to type speakers[index]. everytime
+
+        //template literal - setting up the way your page should look in html
+        let speakerItem = ` 
+                        <li>
+                            <h3>${speaker.name} will be speaking about ${speaker.category}</h3>
+                            </li>
+        `
+        //a different approach to 'appending' each speakerItem (name and category) to the html element. Before we used innerElement
+        speakersUL.insertAdjacentHTML('beforeend', speakerItem)
+    }
+    </script>
+</body>
+</html>

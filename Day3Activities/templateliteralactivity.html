@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 Activity 1: Template Literals</title>
+</head>
+<body>
+    <label for="firstName"> First Name
+        <input type="text" id="firstNameBox">
+    </label>
+    <label for="lastName"> Last Name
+        <input type="text" id="lastNameBox">
+    </label>
+    <button id="submitButton">Submit</button>
+
+    <h1 id="nameHeading"></h1>
+
+    <script>
+
+        const firstNameBox = document.getElementById("firstNameBox");
+        const lastNameBox = document.getElementById("lastNameBox");
+
+        const submitButton = document.getElementById("submitButton");
+        const nameHeading = document.getElementById("nameHeading");
+
+        submitButton.addEventListener("click", function(){
+            const firstName = firstNameBox.value;
+            const lastName = lastNameBox.value;
+
+            nameHeading.innerHTML = `Good morning ${lastName}, ${firstName}`;
+        })
+
+
+    </script>
+</body>
+</html>
