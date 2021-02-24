@@ -23,6 +23,9 @@ buttonSubmit.addEventListener("click", function() {
     let listItem = document.createElement("li");
     listItem.innerHTML = taskName;
 
+    //clearing the text box for the next task
+    addTaskBox.value = ""
+
     //creating the remove button
     let removeButton = document.createElement("button");
     removeButton.innerHTML = "Remove";
