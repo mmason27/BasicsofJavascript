@@ -38,7 +38,7 @@ starterButton.addEventListener("click", function(){
     starters.map(function(dish){
         let starterDish = `
         <div>
-        <img src="${dish.imageURL}">
+        <img src="${dish.imageURL}" class="image">
         <h3>${dish.title}</h3>
         <h3>${dish.description}</h3>
         <h3>$${dish.price}</h3>
@@ -54,7 +54,7 @@ entreeButton.addEventListener("click", function(){
     entrees.map(function(dish){
         let entreeDish = `
         <div>
-        <img src="${dish.imageURL}">
+        <img src="${dish.imageURL}" class="image">
         <h3>${dish.title}</h3>
         <h3>${dish.description}</h3>
         <h3>$${dish.price}</h3>
@@ -69,7 +69,7 @@ dessertButton.addEventListener("click", function(){
     desserts.map(function(dish){
         let dessertDish = `
         <div>
-        <img src="${dish.imageURL}">
+        <img src="${dish.imageURL}" class="image">
         <h3>${dish.title}</h3>
         <h3>${dish.description}</h3>
         <h3>$${dish.price}</h3>
